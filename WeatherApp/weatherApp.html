@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherApp.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />">
+</head>
+
+<body>
+    <main class="main-container">
+        <header class="input-head">
+            <input type="text" class="city" placeholder="Search">
+            <button class="search-btn" onchange="">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </header>
+        <section class="weather-info" >
+             <!-- style="display: none;" -->
+            <div class="location-date">
+                <div class="location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <h4 class="country-txt">Jakarta</h4>
+                </div>
+                <h5 class="current-date reg-txt">Sun, 27 sept</h5>
+            </div>
+
+            <div class="weather-summary">
+                <img src="images/clouds.svg" alt="" class="summary-img">
+                <div class="info-summary">
+                    <h1 class="temp-txt">29 ℃</h1>
+                    <h3 class="condition reg-txt">clouds</h3>
+                </div>
+            </div>
+
+            <div class="weather-condition">
+                <div class="item">
+                    <span class="material-symbols-outlined">
+                        water_drop
+                    </span>
+                    <div class="info">
+                        <h5 class="reg-txt">Humidity</h5>
+                        <h5 class="humi-value">55%</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="material-symbols-outlined">
+                        air
+                    </span>
+                    <div class="info">
+                        <h5 class="reg-txt">Wind Speed</h5>
+                        <h5 class="wind-value">2 m/s</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="forcast">
+                <div class="forcast-item">
+                    <h5 class="forcast-date reg-txt">25 Sept</h5>
+                    <img src="images/thunderstorm.svg" alt="" class="forcast-img">
+                    <h5 class="forcast-temp">29 ℃</h5>
+                </div>
+                <div class="forcast-item">
+                    <h5 class="forcast-date reg-txt">25 Sept</h5>
+                    <img src="images/thunderstorm.svg" alt="" class="forcast-img">
+                    <h5 class="forcast-temp">29 ℃</h5>
+                </div>
+                <div class="forcast-item">
+                    <h5 class="forcast-date reg-txt">25 Sept</h5>
+                    <img src="images/thunderstorm.svg" alt="" class="forcast-img">
+                    <h5 class="forcast-temp">29 ℃</h5>
+                </div>
+                <div class="forcast-item">
+                    <h5 class="forcast-date reg-txt">25 Sept</h5>
+                    <img src="images/thunderstorm.svg" alt="" class="forcast-img">
+                    <h5 class="forcast-temp">29 ℃</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-city section-msg">
+            <img src="images/search-city.png" alt="">
+            <div class="">
+                <h1>Search City</h1>
+            <h4 class="reg-txt">Find out the weather conditions of city</h4>
+            </div>
+        </section>
+
+        <section class="notFound-city section-msg" style="display: none;">
+            <img src="images/not-found.png" alt="">
+            <div class="">
+                <h1>Search City</h1>
+            <h4 class="reg-txt">Find out the weather conditions of city</h4>
+            </div>
+        </section>
+
+        <script src="weatherApp.js"></script>
+</body>
+
+</html>

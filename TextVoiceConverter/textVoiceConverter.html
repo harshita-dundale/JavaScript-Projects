@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text to Voice Converter</title>
+  <style>
+    /* styles.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Text to Voice Converter 🎙</h1>
+    <textarea id="text-input" placeholder="Type something here..."></textarea>
+    <button id="speak-btn">Speak</button>
+  </div>
+  <script> 
+  // script.js
+
+// Select the input and button elements
+const textInput = document.getElementById('text-input');
+const speakBtn = document.getElementById('speak-btn');
+
+// Function to convert text to speech
+const textToSpeech = () => {
+  const text = textInput.value.trim();
+
+  if (text === '') {
+    alert('Please enter some text.');
+    return;
+  }
+
+  // Create a new speech synthesis utterance
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  // Speak the utterance
+  speechSynthesis.speak(utterance);
+};
+
+// Add click event listener to the speak button
+speakBtn.addEventListener('click', textToSpeech);
+
+</script>
+</body>
+</html>
